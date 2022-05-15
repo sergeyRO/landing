@@ -3495,6 +3495,7 @@ h6 {
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
   padding: 50px 30px;
   border-radius: 5px;
+  height: 340px;
 }
 
 .feature_item img {
