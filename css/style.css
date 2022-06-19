@@ -44,6 +44,10 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:300,300i,400,500,700");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.xxx {
+width: 490px;
+}
+
 .media-body
 {
   height: 150px;
@@ -92,6 +96,7 @@ button:focus {
 .p_120 {
   /*padding-top: 60px;
   padding-bottom: 60px;*/
+    background-color: #f9faff;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -314,9 +319,9 @@ button:focus {
   top: -70px;
   left: 0;
   right: 0;
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
+  background-image: -webkit-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
+  background-image: -ms-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
@@ -3360,9 +3365,9 @@ h6 {
 }
 
 .main_btn2:hover {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
+  background-image: -webkit-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
+  background-image: -ms-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
   -webkit-box-shadow: 0px 10px 30px 0px rgba(115, 73, 251, 0.3);
   box-shadow: 0px 10px 30px 0px rgba(115, 73, 251, 0.3);
   color: #fff;
@@ -3496,7 +3501,7 @@ h6 {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
   padding: 50px 30px;
-  border-radius: 5px;
+  border-radius: 16px;
   height: 380px;
 }
 
@@ -3725,7 +3730,7 @@ h6 {
 }
 
 .price_item {
-  height: 1000px;
+  height: 725px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 6px 20px rgb(0 0 0 / 15%);
@@ -3759,7 +3764,8 @@ h6 {
 
 .price_item .price_body {
   /*text-align: center;*/
-  height: 640px;
+  /*height: 640px;*/
+  height: 350px;
   text-align: left;
   margin: 10%;
   padding-top: 30px;
@@ -3852,7 +3858,8 @@ h6 {
 }
 
 .testi_item .media {
-  border-radius: 10px;
+  height: 290px;
+  border-radius: 16px;
   padding: 40px;
   background: #fff;
   -webkit-transition: all 300ms linear 0s;

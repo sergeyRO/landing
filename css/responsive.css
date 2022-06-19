@@ -42,9 +42,9 @@
         margin-bottom: 23px;
     }
 	.header_area .navbar {
-		background-image: -moz-linear-gradient( 0deg, rgba(188,43,255,.8) 0%, rgba(114,73,251,.8) 100%);
-		background-image: -webkit-linear-gradient( 0deg, rgba(188,43,255,.8) 0%, rgba(114,73,251,.8) 100%);
-		background-image: -ms-linear-gradient( 0deg, rgba(188,43,255,.8) 0%, rgba(114,73,251,.8) 100%);
+		background-image: -moz-linear-gradient( 0deg, #616dff 0%, #2b3bff 100%);
+		background-image: -webkit-linear-gradient( 0deg, #616dff 0%, #2b3bff 100%);
+		background-image: -ms-linear-gradient( 0deg, #616dff 0%, #2b3bff 100%);
 	}
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
 		opacity: 1;
@@ -167,6 +167,7 @@
 	}
 	.interior_inner .interior_text {
 		margin-top: 30px;
+		width: 100%;
 	}
 	.interior_two .interior_inner .interior_text {
 		margin-top: 0px;
