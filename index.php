@@ -1030,7 +1030,7 @@ if (!$lang) {
                             <h3>WEB-PORTAL</h3>
                             <font style="vertical-align: inherit;">Multi-page site with basic functionality and advanced settings&nbsp;&nbsp;&nbsp;&nbsp;</font>
                         </div>
-                        <div class="float-right">
+                        <div class="float-right"><br>
                             <h2 style="color: rgb(38, 0, 118);">€ 2000</h2>
                         </div>
                     </div>
@@ -1358,9 +1358,9 @@ if (!$lang) {
                         <div class="float-left" style="width: 100%">
                             <h3>WEB-PORTAL</h3>
                             <font style="vertical-align: inherit;">Mehrseitige Website mit grundlegenden
-                                Funktionen und erweiterten Einstellungen&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                                Funktionen und erweiterten Einstellungen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                         </div>
-                        <div class="float-right">
+                        <div class="float-right"><br>
                             <h2 style="color: rgb(38, 0, 118);">€ 2000</h2>
                         </div>
                     </div>
