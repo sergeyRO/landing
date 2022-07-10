@@ -7,17 +7,17 @@ if (!$lang) {
     if(is_array($localePreferences) && count($localePreferences) > 0) $_SESSION['browser_locale'] = $localePreferences[0];
     if(strpos($_SESSION['browser_locale'], 'ru')!==false) $lang = 'ru';
     if(strpos($_SESSION['browser_locale'], 'de')!==false) $lang = 'de';
-    if(strpos($_SESSION['browser_locale'], 'sv')!==false) $lang = 'sv';
+    if(strpos($_SESSION['browser_locale'], 'sv')!==false) $lang = 'en'/*'sv'*/;
     if(strpos($_SESSION['browser_locale'], 'en')!==false ||
     (strpos($_SESSION['browser_locale'], 'ru')==true &&
         strpos($_SESSION['browser_locale'], 'de')==true &&
         strpos($_SESSION['browser_locale'], 'sv')==true)) $lang = 'en';
 }
+
+
 //$titleRU = 'Дизайн-бюро Артёма Горбунова';
 //$titleEN = 'Artem Gorbunov Design Bureau';
 ?>
-
-
 <!DOCTYPE html>
 <!--<html lang="en">-->
 <head>
@@ -33,6 +33,11 @@ if (!$lang) {
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Подключение CSS файла -->
+    <link rel="stylesheet" href="css/modal.css">
+
+
 
     <link rel="stylesheet" type="text/css" href="/css/dd.min.css" />
     <script src="js/dd.min.js"></script>
@@ -122,7 +127,7 @@ if (!$lang) {
             <select name="lang_menu" is="ms-dropdown" id="tech">
                 <option value="ru" <?php if($lang=='ru') echo 'selected="selected"';?> data-image="img/lang/ru.png">RU</option>
                 <option value="en" <?php if($lang=='en') echo 'selected="selected"';?> data-image="img/lang/eng.png">ENG</option>
-                <option value="sv" <?php if($lang=='sv') echo 'selected="selected"';?> data-image="img/lang/swe.png">SWE</option>
+               <!-- <option value="sv" <?php /*if($lang=='sv') echo 'selected="selected"';*/?> data-image="img/lang/swe.png">SWE</option>-->
                 <option value="de" <?php if($lang=='de') echo 'selected="selected"';?> data-image="img/lang/de.png">DE</option>
             </select>
             <style>
@@ -181,6 +186,8 @@ if (!$lang) {
     </div>
 </section>
 <!--================End Home Banner Area =================-->
+
+<button id="show-1" class="show" data-toggle="modal">show-1</button>
 
 <!--================Home Banner Area =================-->
 <section class="interior_area" id="home" lang="ru">
@@ -692,7 +699,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Начать сейчас</a>
+                        <a class="main_btn2" data-toggle="modal">Начать сейчас</a>
                     </div>
                 </div>
             </div>
@@ -795,7 +802,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Начать сейчас</a>
+                        <a class="main_btn2" data-toggle="modal">Начать сейчас</a>
                     </div>
                 </div>
             </div>
@@ -932,7 +939,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Начать сейчас</a>
+                        <a class="main_btn2" data-toggle="modal">Начать сейчас</a>
                     </div>
                 </div>
             </div>
@@ -1019,7 +1026,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Start now</a>
+                        <a class="main_btn2" data-toggle="modal">Start now</a>
                     </div>
                 </div>
             </div>
@@ -1122,7 +1129,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Start now</a>
+                        <a class="main_btn2" data-toggle="modal">Start now</a>
                     </div>
                 </div>
             </div>
@@ -1259,7 +1266,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Start now</a>
+                        <a class="main_btn2" data-toggle="modal">Start now</a>
                     </div>
                 </div>
             </div>
@@ -1348,7 +1355,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Jetzt starten</a>
+                        <a class="main_btn2" data-toggle="modal">Jetzt starten</a>
                     </div>
                 </div>
             </div>
@@ -1452,7 +1459,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Jetzt starten</a>
+                        <a class="main_btn2" data-toggle="modal">Jetzt starten</a>
                     </div>
                 </div>
             </div>
@@ -1591,7 +1598,7 @@ if (!$lang) {
                         </div>
                     </div>
                     <div class="price_footer">
-                        <a class="main_btn2" href="#">Jetzt starten</a>
+                        <a class="main_btn2" data-toggle="modal">Jetzt starten</a>
                     </div>
                 </div>
             </div>
@@ -1982,9 +1989,266 @@ für NORDPROMOTION.</span></strong></span></h4>
         lang(ddSelect.value.toString());
 
         ddSelect.on("change", function() {
-            lang(ddSelect.value.toString());
+           lang(ddSelect.value.toString());
         });
-
-
-
 </script>
+
+<script>
+    // полифилл CustomEvent для IE11
+    (function () {
+        if (typeof window.CustomEvent === "function") return false;
+        function CustomEvent(event, params) {
+            params = params || { bubbles: false, cancelable: false, detail: null };
+            var evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+            return evt;
+        }
+        window.CustomEvent = CustomEvent;
+    })();
+
+    $modal = function (options) {
+        var
+            _elemModal,
+            _eventShowModal,
+            _eventHideModal,
+            _hiding = false,
+            _destroyed = false,
+            _animationSpeed = 200;
+
+        function _createModal(options) {
+            var
+                elemModal = document.createElement('div'),
+                modalTemplate = '<div class="modal__backdrop" data-dismiss="modal"><div class="modal__content"><div class="modal__header"><div class="modal__title" data-modal="title">{{title}}</div><span class="modal__btn-close" data-dismiss="modal" title="Закрыть">×</span></div><div class="modal__body" data-modal="content">{{content}}</div>{{footer}}</div></div>',
+                modalFooterTemplate = '<div class="modal__footer">{{buttons}}</div>',
+                modalButtonTemplate = '<button type="button" class="{{button_class}}" data-handler={{button_handler}}>{{button_text}}</button>',
+                modalHTML,
+                modalFooterHTML = '';
+
+            elemModal.classList.add('modal');
+            modalHTML = modalTemplate.replace('{{title}}', options.title || '');
+            modalHTML = modalHTML.replace('{{content}}', options.content || '');
+            if (options.footerButtons) {
+                for (var i = 0, length = options.footerButtons.length; i < length; i++) {
+                    var modalFooterButton = modalButtonTemplate.replace('{{button_class}}', options.footerButtons[i].class);
+                    modalFooterButton = modalFooterButton.replace('{{button_handler}}', options.footerButtons[i].handler);
+                    modalFooterButton = modalFooterButton.replace('{{button_text}}', options.footerButtons[i].text);
+                    modalFooterHTML += modalFooterButton;
+                }
+            }
+            modalFooterHTML = modalFooterTemplate.replace('{{buttons}}', modalFooterHTML);
+            modalHTML = modalHTML.replace('{{footer}}', modalFooterHTML);
+            elemModal.innerHTML = modalHTML;
+            document.body.appendChild(elemModal);
+            return elemModal;
+        }
+
+        function _showModal() {
+            if (!_destroyed && !_hiding) {
+                _elemModal.classList.add('modal__show');
+                document.dispatchEvent(_eventShowModal);
+            }
+        }
+
+        function _hideModal() {
+   /*         console.log('EXIT');
+            let element = document.getElementsByClassName('modal');
+            while (element.length) {
+                element[0].parentNode.removeChild(element[0]);
+            }
+*/
+            _hiding = true;
+            _elemModal.classList.remove('modal__show');
+            _elemModal.classList.add('modal__hiding');
+            setTimeout(function () {
+                _elemModal.classList.remove('modal__hiding');
+                _hiding = false;
+            }, _animationSpeed);
+            document.dispatchEvent(_eventHideModal);
+        }
+
+        function _handlerCloseModal(e) {
+            if (e.target.dataset.dismiss === 'modal') {
+                _hideModal();
+            }
+        }
+
+        _elemModal = _createModal(options);
+
+        _elemModal.addEventListener('click', _handlerCloseModal);
+        _eventShowModal = new CustomEvent('show.modal', { detail: _elemModal });
+        _eventHideModal = new CustomEvent('hide.modal', { detail: _elemModal });
+
+        return {
+            show: _showModal,
+            hide: _hideModal,
+            destroy: function () {
+                _elemModal.parentElement.removeChild(_elemModal),
+                    _elemModal.removeEventListener('click', _handlerCloseModal),
+                    destroyed = true;
+            },
+            setContent: function (html) {
+                _elemModal.querySelector('[data-modal="content"]').innerHTML = html;
+            },
+            setTitle: function (text) {
+                _elemModal.querySelector('[data-modal="title"]').innerHTML = text;
+            }
+        }
+    };
+
+    (function () {
+        var elemTarget;
+        document.addEventListener('click', function (e) {
+            switch (ddSelect.value.toString())
+            {
+                case 'ru':
+                    title_lang = 'Оставьте Ваши контакты и мы с Вами свяжемся';
+                    name_lang = 'Имя';
+                    phone_lang = 'Телефон';
+                    email_lang = 'E-mail';
+                    btn_lang = 'Отправить ➔';
+                    policy = 'Даю согласие на';
+                    policy_href = 'Verarbeitung personenbezogener Daten';
+                    response_send_ok = 'Письмо отправлено! Мы скоро с вами свяжимся!';
+                    response_send_error = 'Письмо не отправлено!!! Попробуйте позже!!!';
+                    break;
+                case 'de':
+                    title_lang = 'Hinterlassen Sie Ihre Kontakte und wir werden uns mit Ihnen in Verbindung setzen';
+                    name_lang = 'Name';
+                    phone_lang = 'Telefon';
+                    email_lang = 'E-mail';
+                    btn_lang = 'Senden ➔';
+                    policy = 'Durch Klicken auf die Schaltfläche stimmen Sie der';
+                    policy_href = 'Verarbeitung personenbezogener Daten';
+                    response_send_ok = 'Brief verschickt! Wir werden Sie bald kontaktieren!';
+                    response_send_error = 'E-Mail nicht gesendet!!! Versuche es später!!!';
+                    break;
+                case 'sv':
+                    /* body.className = 'sv';
+                     break;*/
+                case 'en':
+                default:
+                    title_lang = 'Leave your contacts and we will contact you';
+                    name_lang = 'Name';
+                    phone_lang = 'Phone';
+                    email_lang = 'E-mail';
+                    btn_lang = 'Send ➔';
+                    policy = 'I consent to';
+                    policy_href = 'Verarbeitung personenbezogener Daten';
+                    response_send_ok = 'Letter sent! We will contact you soon!';
+                    response_send_error = 'Email not sent!!! Try later!!!';
+                    break;
+            }
+            var modal = $modal({
+                title: title_lang,
+                content:
+                '<div class="fields"><div class="field" data-type="name"><div class="name" lang="'+ddSelect.value.toString()+'">'+name_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
+                '<span id="error_name" style="color:red;float: right;"></span></div>' +
+                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="name"></div></div>' +
+                '<div class="field" data-type="phone"><div class="name">'+phone_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
+                '<span id="error_phone" style="color:red;float: right;"></span></div>' +
+                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="phone"></div></div>' +
+                '<div class="field" data-type="email"><div class="name">'+email_lang+
+                '<span id="error_email" style="color:red;float: right;"></span></div>' +
+                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="e-mail"></div></div></div>' +
+                '<div class="agreement-checkbox"><label>' +
+                '<input type="checkbox" checked="checked"> <span>'+policy+
+                '<a class="btn-modal agreement-link" data-modal="agreement" style="text-decoration: none;border-bottom: 1px dashed #000080;"> '+policy_href+'</a></span></label></div>',
+                footerButtons: [
+                    { class: 'btn btn-2', text: btn_lang, handler: 'modalHandlerOk' }
+                ]
+            });
+            if (e.target.dataset.toggle === 'modal') {
+                elemTarget = e.target;
+                modal.show();
+            }else if (e.target.dataset.handler === 'modalHandlerOk') {
+                var name = document.getElementById('name').value;
+                var phone = document.getElementById('phone').value;
+                var email = document.getElementById('e-mail').value;
+                console.log(name+'    '+phone+'    '+email+'    TYT');
+                $.ajax({
+                    type:"POST",
+                    url : "examination.php",
+                    data:{
+                        'name':name,
+                        'phone':phone,
+                        'e-mail':email
+                    },
+                    success:function(data){
+                        var res = $.parseJSON(data);
+                        document.getElementById('error_name').innerHTML="";
+                        document.getElementById('error_phone').innerHTML="";
+                        document.getElementById('error_email').innerHTML="";
+                        res.forEach(function(res) {
+                            if(res.type=='name')
+                            {
+                                document.getElementById('error_name').innerHTML="("+res.error+")";
+                            }
+                            if(res.type=='phone')
+                            {
+                                document.getElementById('error_phone').innerHTML="("+res.error+")";
+                            }
+                            if(res.type=='email')
+                            {
+                                document.getElementById('error_email').innerHTML="("+res.error+")";
+                            }
+                            if(res.type=='success')
+                            {
+                                $.ajax({
+                                    type:"POST",
+                                    url : "send_mail.php",
+                                    data:{
+                                        'name':name,
+                                        'phone':phone,
+                                        'e-mail':email
+                                    },
+                                    success:function(data){
+                                        //Письмо отправлено
+                                        if(data == 1)
+                                        {
+                                            modal.hide();
+                                            var modal1 = $modal({
+                                                title: title_lang,
+                                                content:
+                                                    '<p style="font-size: 20px;">'+response_send_ok+'</p>',
+                                            });
+                                            modal1.show();
+                                            document.getElementById('error_name').innerHTML="";
+                                            document.getElementById('error_phone').innerHTML="";
+                                            document.getElementById('error_email').innerHTML="";
+                                            document.getElementById('name').innerHTML="";
+                                            document.getElementById('phone').innerHTML="";
+                                            document.getElementById('e-mail').innerHTML="";
+                                            setTimeout(function(){
+                                                modal1.hide();
+                                            },3000)
+                                        }
+                                        //Письмо не отправлено
+                                        else {
+                                            modal.hide();
+                                            var modal1 = $modal({
+                                                title: title_lang,
+                                                content:
+                                                '<p style="font-size: 20px;">'+response_send_error+'</p>',
+                                            });
+                                            modal1.show();
+                                            document.getElementById('error_name').innerHTML="";
+                                            document.getElementById('error_phone').innerHTML="";
+                                            document.getElementById('error_email').innerHTML="";
+                                            setTimeout(function(){
+                                                modal1.hide();
+                                            },3000)
+
+                                        }
+                                    }
+                            })
+                    }
+                });
+            }
+    });
+
+            }
+        });
+    })();
+</script>
+
+

@@ -231,12 +231,12 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  /*color: inherit;*/
   text-decoration: none;
 }
 
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
+  /*color: inherit;*/
   text-decoration: none;
 }
 
@@ -2272,6 +2272,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .btn {
+  background-image: -webkit-linear-gradient(0deg, #616dff 0%, #2b3bff 100%);
+  color: white;
+  font-weight: bold;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -5012,7 +5015,7 @@ button.close {
   -webkit-appearance: none;
 }
 
-.modal-open {
+/*.modal-open {
   overflow: hidden;
 }
 
@@ -5156,7 +5159,7 @@ button.close {
   .modal-lg {
     max-width: 800px;
   }
-}
+}*/
 
 .tooltip {
   position: absolute;
