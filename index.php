@@ -37,8 +37,6 @@ if (!$lang) {
     <!-- Подключение CSS файла -->
     <link rel="stylesheet" href="css/modal.css">
 
-
-
     <link rel="stylesheet" type="text/css" href="/css/dd.min.css" />
     <script src="js/dd.min.js"></script>
 </head>
@@ -99,7 +97,6 @@ if (!$lang) {
                         <li class="nav-item active"><a class="nav-link" href="#home">О НАС</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feature">Продвижение в интернете</a></li>
                         <li class="nav-item"><a class="nav-link" href="#price">Прайс</a>
-                        <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a>
                         <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
@@ -109,7 +106,6 @@ if (!$lang) {
                         <li class="nav-item active"><a class="nav-link" href="#home">Über uns</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feature">Förderung der Internetpräsenz</a></li>
                         <li class="nav-item"><a class="nav-link" href="#price">Preis</a>
-                        <li class="nav-item"><a class="nav-link" href="#reviews">Bewertungen</a>
                         <li class="nav-item"><a class="nav-link" href="#contacts">Kontakt</a></li>
                     </ul>
                 </div>
@@ -119,7 +115,6 @@ if (!$lang) {
                         <li class="nav-item active"><a class="nav-link" href="#home">ABOUT US</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feature">Internet promotion</a></li>
                         <li class="nav-item"><a class="nav-link" href="#price">Price</a>
-                        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a>
                         <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
@@ -186,8 +181,6 @@ if (!$lang) {
     </div>
 </section>
 <!--================End Home Banner Area =================-->
-
-<button id="show-1" class="show" data-toggle="modal">show-1</button>
 
 <!--================Home Banner Area =================-->
 <section class="interior_area" id="home" lang="ru">
@@ -1607,76 +1600,6 @@ if (!$lang) {
 </section>
 <!--================End Price Area =================-->
 
-<!--================Testimonials Area =================-->
-<section class="testimonials_area p_120" id="reviews">
-    <div class="container">
-        <div class="main_title" lang="ru">
-            <h2>Что говорят наши клиенты?</h2>
-        </div>
-        <div class="main_title" lang="en">
-            <h2>What do our clients say?</h2>
-        </div>
-        <div class="main_title" lang="de">
-            <h2>Was sagen unsere Kunden?</h2>
-        </div>
-        <div class="testi_slider owl-carousel">
-            <div class="item">
-                <div class="testi_item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="https://lh3.googleusercontent.com/a/AATXAJyCkcLLmcwg0Nrh-cBvlL4cba3dtluCj3apHk8K=s120-c-c-rp-w64-h64-mo-br100" alt="Никлас Кресснер" data-lazy-src="https://lh3.googleusercontent.com/a/AATXAJyCkcLLmcwg0Nrh-cBvlL4cba3dtluCj3apHk8K=s120-c-c-rp-w64-h64-mo-br100" data-ll-status="loaded" class="entered lazyloaded">
-                        </div>
-                        <div class="media-body">
-                            <p>Никлас Кресснер</p>
-                            <p>Я очень доволен Sitea! Быстрое и хорошее обслуживание. Настоятельно рекомендуется!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testi_item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="https://lh3.googleusercontent.com/a-/AOh14GgjGkvL2vTIIB4MNjJftJPCx1fZR15n2IJH9uV4=s120-c-c-rp-w64-h64-mo-br100" alt="Хокан Мелин" data-lazy-src="https://lh3.googleusercontent.com/a-/AOh14GgjGkvL2vTIIB4MNjJftJPCx1fZR15n2IJH9uV4=s120-c-c-rp-w64-h64-mo-br100" data-ll-status="loaded" class="entered lazyloaded">
-                        </div>
-                        <div class="media-body">
-                            <p>Хокан Мелин</p>
-                            <p>Использовал Sitea для настройки веб-сайта и начала работы с Google Analytics и Google Ads и очень доволен обслуживанием и реакцией. Хокан Мелин - Настройка продаж</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testi_item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="https://lh3.googleusercontent.com/a-/AOh14Gg4vupiV1LgyouOkzHS3HLNkLPrNhGJuiq3GCVP=s120-c-c-rp-w64-h64-mo-br100" alt="Лена Магисте" data-lazy-src="https://lh3.googleusercontent.com/a-/AOh14Gg4vupiV1LgyouOkzHS3HLNkLPrNhGJuiq3GCVP=s120-c-c-rp-w64-h64-mo-br100" data-ll-status="loaded" class="entered lazyloaded">
-                        </div>
-                        <div class="media-body">
-                            <p>Лена Магисте</p>
-                            <p>Мы в LM Travel очень довольны нашим сайтом! Сайта отзывчивый, профессиональный и с отличным личным обслуживанием.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testi_item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="https://lh3.googleusercontent.com/a-/AOh14GhDGS7fGU8wuURE7eY5mZ_SDXE0_d2WnsHrlv0XTg=s120-c-c-rp-w64-h64-mo-br100" alt="Фарис I" data-lazy-src="https://lh3.googleusercontent.com/a-/AOh14GhDGS7fGU8wuURE7eY5mZ_SDXE0_d2WnsHrlv0XTg=s120-c-c-rp-w64-h64-mo-br100" data-ll-status="loaded" class="entered lazyloaded">
-                        </div>
-                        <div class="media-body">
-                            <p>Фарис I</p>
-                            <p>Получил помощь в разработке моего музыкального сайта. Быстрое обслуживание и дружелюбный персонал. Большое спасибо Дэну за помощь!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Testimonials Area =================-->
-
 <!--================ start footer Area  =================-->
 <footer class="footer-area p_120" id="contacts" style="display: table;width: 100%">
 <div lang="ru">
@@ -1951,7 +1874,6 @@ für NORDPROMOTION.</span></strong></span></h4>
     })
 </script>
 
-
 <script>
         function lang(word) {
             var body = document.getElementsByTagName('body')[0];
@@ -1985,7 +1907,6 @@ für NORDPROMOTION.</span></strong></span></h4>
             ].join('');
         }
         ddSelect = document.getElementById("tech").msDropdown;
-
         lang(ddSelect.value.toString());
 
         ddSelect.on("change", function() {
@@ -2050,12 +1971,6 @@ für NORDPROMOTION.</span></strong></span></h4>
         }
 
         function _hideModal() {
-   /*         console.log('EXIT');
-            let element = document.getElementsByClassName('modal');
-            while (element.length) {
-                element[0].parentNode.removeChild(element[0]);
-            }
-*/
             _hiding = true;
             _elemModal.classList.remove('modal__show');
             _elemModal.classList.add('modal__hiding');
@@ -2098,86 +2013,93 @@ für NORDPROMOTION.</span></strong></span></h4>
     (function () {
         var elemTarget;
         document.addEventListener('click', function (e) {
-            switch (ddSelect.value.toString())
-            {
-                case 'ru':
-                    title_lang = 'Оставьте Ваши контакты и мы с Вами свяжемся';
-                    name_lang = 'Имя';
-                    phone_lang = 'Телефон';
-                    email_lang = 'E-mail';
-                    btn_lang = 'Отправить ➔';
-                    policy = 'Даю согласие на';
-                    policy_href = 'Verarbeitung personenbezogener Daten';
-                    response_send_ok = 'Письмо отправлено! Мы скоро с вами свяжимся!';
-                    response_send_error = 'Письмо не отправлено!!! Попробуйте позже!!!';
-                    break;
-                case 'de':
-                    title_lang = 'Hinterlassen Sie Ihre Kontakte und wir werden uns mit Ihnen in Verbindung setzen';
-                    name_lang = 'Name';
-                    phone_lang = 'Telefon';
-                    email_lang = 'E-mail';
-                    btn_lang = 'Senden ➔';
-                    policy = 'Durch Klicken auf die Schaltfläche stimmen Sie der';
-                    policy_href = 'Verarbeitung personenbezogener Daten';
-                    response_send_ok = 'Brief verschickt! Wir werden Sie bald kontaktieren!';
-                    response_send_error = 'E-Mail nicht gesendet!!! Versuche es später!!!';
-                    break;
-                case 'sv':
-                    /* body.className = 'sv';
-                     break;*/
-                case 'en':
-                default:
-                    title_lang = 'Leave your contacts and we will contact you';
-                    name_lang = 'Name';
-                    phone_lang = 'Phone';
-                    email_lang = 'E-mail';
-                    btn_lang = 'Send ➔';
-                    policy = 'I consent to';
-                    policy_href = 'Verarbeitung personenbezogener Daten';
-                    response_send_ok = 'Letter sent! We will contact you soon!';
-                    response_send_error = 'Email not sent!!! Try later!!!';
-                    break;
-            }
-            var modal = $modal({
-                title: title_lang,
-                content:
-                '<div class="fields"><div class="field" data-type="name"><div class="name" lang="'+ddSelect.value.toString()+'">'+name_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
-                '<span id="error_name" style="color:red;float: right;"></span></div>' +
-                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="name"></div></div>' +
-                '<div class="field" data-type="phone"><div class="name">'+phone_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
-                '<span id="error_phone" style="color:red;float: right;"></span></div>' +
-                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="phone"></div></div>' +
-                '<div class="field" data-type="email"><div class="name">'+email_lang+
-                '<span id="error_email" style="color:red;float: right;"></span></div>' +
-                '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="e-mail"></div></div></div>' +
-                '<div class="agreement-checkbox"><label>' +
-                '<input type="checkbox" checked="checked"> <span>'+policy+
-                '<a class="btn-modal agreement-link" data-modal="agreement" style="text-decoration: none;border-bottom: 1px dashed #000080;"> '+policy_href+'</a></span></label></div>',
-                footerButtons: [
-                    { class: 'btn btn-2', text: btn_lang, handler: 'modalHandlerOk' }
-                ]
-            });
             if (e.target.dataset.toggle === 'modal') {
+                $('.modal').detach();
+                switch (ddSelect.value.toString())
+                {
+                    case 'ru':
+                        title_lang = 'Оставьте Ваши контакты и мы с Вами свяжемся';
+                        name_lang = 'Имя';
+                        phone_lang = 'Телефон';
+                        email_lang = 'E-mail';
+                        btn_lang = 'Отправить ➔';
+                        policy = 'Даю согласие на';
+                        policy_href = 'обработку персональных данных';
+                        response_send_ok = 'Письмо отправлено! Мы скоро с вами свяжимся!';
+                        response_send_error = 'Письмо не отправлено!!! Попробуйте позже!!!';
+                        break;
+                    case 'de':
+                        title_lang = 'Hinterlassen Sie Ihre Kontakte und wir werden uns mit Ihnen in Verbindung setzen';
+                        name_lang = 'Name';
+                        phone_lang = 'Telefon';
+                        email_lang = 'E-mail';
+                        btn_lang = 'Senden ➔';
+                        policy = 'Durch Klicken auf die Schaltfläche stimmen Sie der';
+                        policy_href = 'Verarbeitung personenbezogener Daten';
+                        response_send_ok = 'Brief verschickt! Wir werden Sie bald kontaktieren!';
+                        response_send_error = 'E-Mail nicht gesendet!!! Versuche es später!!!';
+                        break;
+                    case 'sv':
+                        /* body.className = 'sv';
+                         break;*/
+                    case 'en':
+                    default:
+                        title_lang = 'Leave your contacts and we will contact you';
+                        name_lang = 'Name';
+                        phone_lang = 'Phone';
+                        email_lang = 'E-mail';
+                        btn_lang = 'Send ➔';
+                        policy = 'By clicking the button, you consent to the';
+                        policy_href = 'processing of personal data';
+                        response_send_ok = 'Letter sent! We will contact you soon!';
+                        response_send_error = 'Email not sent!!! Try later!!!';
+                        break;
+                }
+                var modal = $modal({
+                    title: title_lang,
+                    content:
+                    '<div class="fields"><div class="field" data-type="name"><div class="name" lang="'+ddSelect.value.toString()+'">'+name_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
+                    '<span id="error_name" style="color:red;float: right;"></span></div>' +
+                    '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="name"></div></div>' +
+                    '<div class="field" data-type="phone"><div class="name">'+phone_lang+'<span class="required" style="color:red;">&nbsp;*</span>' +
+                    '<span id="error_phone" style="color:red;float: right;"></span></div>' +
+                    '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="phone"></div></div>' +
+                    '<div class="field" data-type="email"><div class="name">'+email_lang+
+                    '<span id="error_email" style="color:red;float: right;"></span></div>' +
+                    '<div class="input"><input class="form-control text" style="border-radius: 5px;" id="e-mail"></div></div></div>' +
+                    '<div class="agreement-checkbox"><label>' +
+                    '<input type="checkbox" id="policy" checked="checked"> <span>'+policy+
+                    '<a class="btn-modal agreement-link" data-modal="agreement" style="text-decoration: none;border-bottom: 1px dashed #000080;"> '+policy_href+'</a></span></label>' +
+                    '<br><span id="error_check" style="color:red;float: right"></span></div><br>',
+                    footerButtons: [
+                        { class: 'btn btn-2', text: btn_lang, handler: 'modalHandlerOk' }
+                    ]
+                });
                 elemTarget = e.target;
                 modal.show();
             }else if (e.target.dataset.handler === 'modalHandlerOk') {
                 var name = document.getElementById('name').value;
                 var phone = document.getElementById('phone').value;
                 var email = document.getElementById('e-mail').value;
-                console.log(name+'    '+phone+'    '+email+'    TYT');
+
+                if($('#policy').prop('checked')) var check = 1;
+                else var check = 0;
                 $.ajax({
                     type:"POST",
                     url : "examination.php",
                     data:{
                         'name':name,
                         'phone':phone,
-                        'e-mail':email
+                        'e-mail':email,
+                        'lang':ddSelect.value.toString(),
+                        'check':check
                     },
                     success:function(data){
                         var res = $.parseJSON(data);
                         document.getElementById('error_name').innerHTML="";
                         document.getElementById('error_phone').innerHTML="";
                         document.getElementById('error_email').innerHTML="";
+                        document.getElementById('error_check').innerHTML="";
                         res.forEach(function(res) {
                             if(res.type=='name')
                             {
@@ -2190,6 +2112,10 @@ für NORDPROMOTION.</span></strong></span></h4>
                             if(res.type=='email')
                             {
                                 document.getElementById('error_email').innerHTML="("+res.error+")";
+                            }
+                            if(res.type=='check')
+                            {
+                                document.getElementById('error_check').innerHTML="("+res.error+")";
                             }
                             if(res.type=='success')
                             {
@@ -2215,6 +2141,7 @@ für NORDPROMOTION.</span></strong></span></h4>
                                             document.getElementById('error_name').innerHTML="";
                                             document.getElementById('error_phone').innerHTML="";
                                             document.getElementById('error_email').innerHTML="";
+                                            document.getElementById('error_check').innerHTML="";
                                             document.getElementById('name').innerHTML="";
                                             document.getElementById('phone').innerHTML="";
                                             document.getElementById('e-mail').innerHTML="";
@@ -2234,6 +2161,7 @@ für NORDPROMOTION.</span></strong></span></h4>
                                             document.getElementById('error_name').innerHTML="";
                                             document.getElementById('error_phone').innerHTML="";
                                             document.getElementById('error_email').innerHTML="";
+                                            document.getElementById('error_check').innerHTML="";
                                             setTimeout(function(){
                                                 modal1.hide();
                                             },3000)
