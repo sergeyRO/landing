@@ -45,10 +45,14 @@
 .ms-dd .ms-dd-arrow.ms-dd-pointer-up{border:5px solid transparent;border-bottom-color:white;margin-top:-8px}
 .ms-dd .ms-options
 {
-    background:/*#2b3bff;*/#0772ff;
-    /*border:1px solid #ccc;*/
+    background-image: -webkit-linear-gradient( 0deg, #036ffd 0%, #006eff 100%);
     border-top:none;box-shadow:0 1px 5px #ddd;display:none;
-    list-style:none;margin:0;overflow:auto;padding:0;position:absolute;width:100%;z-index:9999}
+    list-style:none;margin:0;overflow:auto;padding:0;
+    /*position:absolute;*/
+    position:fixed;
+    /*width:100%;*/
+    width:110px;
+    z-index:9999}
 .ms-dd .ms-list-option,.ms-dd .ms-optgroup ul .ms-list-option
 {align-items:center;
     /*border-bottom:1px solid #ddd;*/
@@ -60,7 +64,9 @@
 .ms-dd .ms-list-option:hover,.ms-dd .ms-optgroup ul .ms-list-option:hover
 {background:#616dff;color:#000}
 .ms-dd .ms-list-option.option-selected,.ms-dd .ms-optgroup ul .ms-list-option.option-selected
-{background:/*#2b3bff*/#0772ff}
+{/*background:!*#2b3bff*!#0772ff*/
+    background-image: -webkit-linear-gradient( 0deg, #036ffd 0%, #006eff 100%);
+}
 .navbar_fixed .ms-dd .ms-list-option.option-selected,.ms-dd .ms-optgroup ul .ms-list-option.option-selected
 {
     background:#2b3bff
