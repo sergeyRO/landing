@@ -136,6 +136,10 @@ if (!$lang) {
                     .ms-dd .ms-list-option.option-selected, .ms-dd .ms-optgroup ul .ms-list-option.option-selected {
                         background-image: -webkit-linear-gradient( 0deg, #5a67ff 0%, #5561ff 100%);
                     }
+                    .navbar_fixed .ms-dd .ms-list-option.option-selected,.ms-dd .ms-optgroup ul .ms-list-option.option-selected
+                    {
+                        background-image: -webkit-linear-gradient( 0deg, #5a67ff 0%, #5561ff 100%);
+                    }
                 }
             </style>
 

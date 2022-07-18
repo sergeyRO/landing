@@ -69,7 +69,8 @@
 }
 .navbar_fixed .ms-dd .ms-list-option.option-selected,.ms-dd .ms-optgroup ul .ms-list-option.option-selected
 {
-    background:#2b3bff
+    /*background:#2b3bff*/
+    background-image: -webkit-linear-gradient( 0deg, #3847ff 0%, #2b3bff 100%);
 }
 .navbar_fixed .ms-dd .ms-options
 {
